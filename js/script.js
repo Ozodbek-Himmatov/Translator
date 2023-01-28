@@ -57,7 +57,7 @@ translateBtn.addEventListener("click", () => {
     let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
     fetch(apiUrl)
         .then((res) => res.json())
-        .then((data) => {
+        .then((data) => {   
             toText.value = data.responseData.translatedText;
             console.log(data);
             data.matches.forEach((data) => {
